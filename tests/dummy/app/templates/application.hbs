@@ -1,3 +1,13 @@
-<h2 id="title">Welcome to Ember.js</h2>
+<p>To test, proxy xhr to production</p>
+<p>ember s --proxy https://www.propertyinsight.ca</p>
 
-{{outlet}}
+<h2>Start multiple ajax queues</h2>
+<p>Set url to an invalid url (e.g. /api_v1/foo) to test for error response</p>
+Request URL {{input value=url}}<br />
+<button {{action "start"}}>Start</button>
+
+<ul>
+    {{#each logs as |log|}}
+        <li>{{log.message}}</li>
+    {{/each}}
+</ul>
